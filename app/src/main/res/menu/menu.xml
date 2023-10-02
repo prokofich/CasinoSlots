@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_menu_cash_account"
+        android:icon="@drawable/ic_money"
+        android:title="cash_account"/>
+
+    <item
+        android:id="@+id/id_menu_game"
+        android:icon="@drawable/ic_game"
+        android:title="game"/>
+
+</menu>

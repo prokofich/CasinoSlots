@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708262124463",
+    "project_id": "casinoslots-b4559",
+    "storage_bucket": "casinoslots-b4559.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708262124463:android:2d7f1d2a9f2df022122d5a",
+        "android_client_info": {
+          "package_name": "com.example.casinoslots"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATdbmN6BitpyqERzaf7POQzkhDbl2jBe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

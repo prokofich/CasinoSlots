@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.CashAccountFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/id_cash_account_img"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:id="@+id/id_cash_account_tv_title"
+        android:fontFamily="@font/abril_fatface"
+        android:textColor="@color/white"
+        android:text="CASH ACCOUNT"
+        android:textSize="45sp"
+        android:background="@drawable/background_tv_cash_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintHeight_percent="0.11"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:id="@+id/id_cash_account_tv_desc"
+        android:textStyle=""
+        android:text="top up your account in order to play!"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:background="@drawable/background_tv_cash_account2"
+        app:layout_constraintTop_toBottomOf="@id/id_cash_account_tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_margin="10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_tv_cash_account2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="50dp"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintTop_toBottomOf="@id/id_cash_account_tv_desc">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:id="@+id/id_cash_account_tv_your_money"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="your money: 0$"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/id_cash_account_tv_your_money"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="take the money!"
+            android:textSize="43sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:id="@+id/id_cash_account_tv_desc2"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_cash_account_tv_your_money"
+            app:layout_constraintBottom_toTopOf="@id/id_cash_account_cs_button_get_money"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/id_cash_account_cs_button_get_money"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="15dp"
+            android:background="@drawable/background_cs_cash_account"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/id_cash_account_tv_get"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="GET"
+                android:textSize="55sp"
+                app:layout_constraintWidth_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/id_cash_account_img_money"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@id/id_cash_account_tv_get"
+                android:id="@+id/id_cash_account_img_money"
+                app:layout_constraintWidth_percent="0.35"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
