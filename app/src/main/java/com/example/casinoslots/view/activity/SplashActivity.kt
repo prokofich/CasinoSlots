@@ -19,17 +19,17 @@ import java.util.UUID
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySplashBinding
+    private var binding: ActivitySplashBinding? = null
     private val repository = Repository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
-        val view = binding.root
+        val view = binding?.root
         setContentView(view)
 
         //загрузка фоновой картинки
-        repository.loadImage(url_image_splash,binding.idSplashImg)
+        repository.loadImage(url_image_splash,binding!!.idSplashImg)
 
         val splashViewModel = ViewModelProvider(this)[SplashViewModel::class.java]
         val namePhone = Build.MODEL.toString()

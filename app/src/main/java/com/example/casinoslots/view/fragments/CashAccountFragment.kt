@@ -33,7 +33,7 @@ class CashAccountFragment : Fragment() {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
         //показ денежного счета
-        binding!!.idCashAccountTvYourMoney.text = "your money:${repository.getMoneyInCashAccount()}"
+        binding?.idCashAccountTvYourMoney?.text = "your money:${repository.getMoneyInCashAccount()}"
     }
 
     @SuppressLint("SetTextI18n", "NewApi")
@@ -47,16 +47,16 @@ class CashAccountFragment : Fragment() {
         repository.loadImage(url_image_symbol_money ,binding!!.idCashAccountImgMoney)
 
         if(repository.checkTodayAndLastDay()){
-            binding!!.idCashAccountTvDesc2.text = "take the money!"
+            binding?.idCashAccountTvDesc2?.text = "take the money!"
         }else{
-            binding!!.idCashAccountTvDesc2.text = "try it tomorrow"
+            binding?.idCashAccountTvDesc2?.text = "try it tomorrow"
         }
 
         
 
 
         //обработка нажатия на кнопку пополнения счета
-        binding!!.idCashAccountCsButtonGetMoney.setOnClickListener {
+        binding?.idCashAccountCsButtonGetMoney?.setOnClickListener {
             if(repository.checkTodayAndLastDay()){
                 //можно пополнить
                 val currentDate = LocalDate.now()
@@ -66,11 +66,11 @@ class CashAccountFragment : Fragment() {
                 val money = listMoneyForCashAccount.shuffled()[0]
                 repository.addMoneyInCashAccount(money = money)
                 repository.shortToast(context = requireContext(), message = "$money$")
-                binding!!.idCashAccountTvDesc2.text = "+$money$"
+                binding?.idCashAccountTvDesc2?.text = "+$money$"
             }else{
                 //нельзя пополнить
                 repository.longToast(context = requireContext(), message = "you will be able to top up your account only the next day")
-                binding!!.idCashAccountTvDesc2.text = "try it tomorrow"
+                binding?.idCashAccountTvDesc2?.text = "try it tomorrow"
             }
         }
 

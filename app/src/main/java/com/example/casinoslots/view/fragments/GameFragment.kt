@@ -44,7 +44,7 @@ class GameFragment : Fragment() {
         @Suppress("DEPRECATION")
         super.onActivityCreated(savedInstanceState)
         //показ денежного счета
-        binding!!.idGameTvYourMoney.text = "your money:${repository.getMoneyInCashAccount()}$"
+        binding?.idGameTvYourMoney?.text = "your money:${repository.getMoneyInCashAccount()}$"
     }
 
     @SuppressLint("SetTextI18n", "NewApi")
@@ -68,7 +68,7 @@ class GameFragment : Fragment() {
         repository.loadImage(url_image_symbol_question1,binding!!.idGameCs2Iv4)
 
         //обработка нажатия на кнопку начала игры
-        binding!!.idGameCs1ButtonGo.setOnClickListener {
+        binding?.idGameCs1ButtonGo?.setOnClickListener {
             if(!job.isActive){
                 if(repository.getMoneyInCashAccount() >= 25){
                     //начало игры
@@ -94,11 +94,11 @@ class GameFragment : Fragment() {
                             repository.longToast(requireContext(),"no luck...")
                             repository.shortToast(requireContext(),"-25$")
                         }
-                        binding!!.idGameTvYourMoney.text = "your money:${repository.getMoneyInCashAccount()}$"
+                        binding?.idGameTvYourMoney?.text = "your money:${repository.getMoneyInCashAccount()}$"
                         delay(500)
-                        repository.loadImage(url_image_symbol_question2,binding!!.idGameCs1Iv1)
-                        repository.loadImage(url_image_symbol_question2,binding!!.idGameCs1Iv2)
-                        repository.loadImage(url_image_symbol_question2,binding!!.idGameCs1Iv3)
+                        repository.loadImage(url_image_symbol_question2,binding?.idGameCs1Iv1)
+                        repository.loadImage(url_image_symbol_question2,binding?.idGameCs1Iv2)
+                        repository.loadImage(url_image_symbol_question2,binding?.idGameCs1Iv3)
                         listSlots1 = mutableListOf()
                         job.cancel()
                     }

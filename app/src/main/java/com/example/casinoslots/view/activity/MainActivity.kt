@@ -20,12 +20,12 @@ class MainActivity : AppCompatActivity() {
     private val cashAccountFragment = CashAccountFragment()
     private val gameFragment = GameFragment()
 
-    private lateinit var binding:ActivityMainBinding
+    private var binding:ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
+        val view = binding?.root
         setContentView(view)
 
         //полноэкранный режим
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         //смена фрагментов на экране путем нажатия на кнопки меню
         replaceFragment(gameFragment)
         @Suppress("DEPRECATION")
-        binding.idBottomNavigation.setOnNavigationItemSelectedListener {
+        binding?.idBottomNavigation?.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.id_menu_game ->replaceFragment(gameFragment)
                 R.id.id_menu_cash_account ->replaceFragment(cashAccountFragment)

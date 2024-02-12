@@ -20,7 +20,7 @@ class Repository {
     }
 
     //функция загрузки изображения
-    fun loadImage(url:String,id: ImageView){
+    fun loadImage(url:String,id: ImageView?){
         Picasso.get()
             .load(url)
             .into(id)
